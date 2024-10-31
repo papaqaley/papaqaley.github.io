@@ -34,6 +34,17 @@
             bottom: 0;
             width: 100%;
         }
+        /* Tambahan styling untuk dialog bubble */
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            --df-messenger-bot-message: #4CAF50;
+            --df-messenger-chat-background-color: #f4f4f9;
+            --df-messenger-font-color: #333;
+            --df-messenger-send-icon: #4CAF50;
+        }
     </style>
 </head>
 <body>
@@ -50,27 +61,21 @@
         <h2>Contact</h2>
         <p>You can reach me on <a href="https://github.com/papaqaley" target="_blank">GitHub</a>.</p>
     </section>
+
+    <!-- Integrasi Dialogflow Messenger -->
     <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-<df-messenger
-  oauth-client-id="606480467939-jp5gavn2udbbntn5eqtuo0i08vn4prqt.apps.googleusercontent.com"
-  location="us-central1"
-  project-id="itcc-2024-440008"
-  agent-id="cb1f22a3-7085-488d-b95e-9fe8803dd119"
-  language-code="en"
-  max-query-length="-1">
-  <df-messenger-chat-bubble
-   chat-title="agent-itcc">
-  </df-messenger-chat-bubble>
-</df-messenger>
-<style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-  }
-</style>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      oauth-client-id="606480467939-jp5gavn2udbbntn5eqtuo0i08vn4prqt.apps.googleusercontent.com"
+      location="us-central1"
+      project-id="itcc-2024-440008"
+      agent-id="cb1f22a3-7085-488d-b95e-9fe8803dd119"
+      language-code="en"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+        chat-title="agent-itcc">
+      </df-messenger-chat-bubble>
+    </df-messenger>
 
     <footer>
         <p>&copy; 2024 My GitHub Page | All rights reserved.</p>
